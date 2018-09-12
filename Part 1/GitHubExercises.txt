@@ -1,0 +1,18 @@
+1. mkdir test_repo && cd test_repo
+touch test.txt
+git init
+git add .
+git commit -m "adding test.txt"
+2. git remote add origin https://github.com/YozoraNoHoshi/TestRepository.git
+git push -u origin master
+3. See GitHub
+4. git checkout -b forked
+touch file.txt
+git add .
+git commit -m "file add"
+git push origin forked
+5. See GitHub
+
+Part 2
+
+Jeremy Bowers was the culprit

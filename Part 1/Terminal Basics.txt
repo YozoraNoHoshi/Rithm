@@ -1,0 +1,26 @@
+1. mkdir first
+2. cd first
+3. touch person.txt
+4. mv person.txt another.txt
+5. cp another.txt copy.txt
+6. rm copytxt
+7. cd ..
+cp first second
+8. rm -rf second
+
+Part 2
+1. Opens the manual to look up a command. "D" to go forward half a page; "B" to go backwards a page. "U" to go back half a page. "Q" to exit.
+2. -l will list in long format (more detail), while -a will include all files and folders, even hidden ones.
+3. curl https://www.google.com > google.html
+4. less google.html
+5. less -p hplogo google.html
+6. Option + left/right arrow keys
+7. Control + e
+8. Control + a 
+9. option + delete
+10. The shell is the environment; the terminal is a way to act upon the shell
+11. Starts from the root directory to the file/folder
+12. Starts from the current working directory and goes to the file/folder
+13. Flags are extra options/parameters to pass to a command that changes the output.
+-a, -l, -rf, -r are examples of flags.
+14. -r will remove folders and -f will force a removal, even if files are inside the folder. 

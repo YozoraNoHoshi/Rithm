@@ -1,0 +1,11 @@
+Part 1
+1. git clean removes untracked/unmerged files from the working directory
+2. -d removes untracked directories, while -f forces removal (since clean.requireForce variable is usually true by default).
+3. git checkout -b branchName
+4. Fast forward merges occur when no commits have been made since branching, recursives occur when a different commit was made to the merge branch
+5. git checkout branchName
+6. git checkout
+7. git branch -D branchName
+8. Shows the changes in the working tree that are unstaged for the next commit
+9. git rm --cached fileName (pass -r to remove a folder)
+10. During a recursive merge wwhen changes are committed to the same file on different branches. Git doesnt know which one to use so it makes the human do it.

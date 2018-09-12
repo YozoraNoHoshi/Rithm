@@ -1,0 +1,80 @@
+Last login: Mon Sep 10 22:06:37 on ttys001
+➜  ~ cd Documents/Rithm
+➜  Rithm git:(master) ✗ git log
+➜  Rithm git:(master) ✗ rm -rf .git
+➜  Rithm rm mergeConflict.txt
+➜  Rithm mkdir GitTest
+➜  Rithm cd GitTest
+➜  GitTest git init               
+Initialized empty Git repository in /Users/nsena/Documents/Rithm/GitTest/.git/
+➜  GitTest git:(master) echo greetings > hi.txt
+➜  GitTest git:(master) ✗ git add .
+➜  GitTest git:(master) ✗ git commit -m "First greetings"
+[master (root-commit) 0a5a55c] First greetings
+ Committer: Nathan Chin <nsena@Nathans-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hi.txt
+➜  GitTest git:(master) git config --global user.email s3nchin@gmail.com
+➜  GitTest git:(master) git commit --amend --reset-author
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+➜  GitTest git:(master) rm .git
+rm: .git: is a directory
+➜  GitTest git:(master) rm -rf .git
+➜  GitTest git init
+Initialized empty Git repository in /Users/nsena/Documents/Rithm/GitTest/.git/
+➜  GitTest git:(master) ✗ git add .
+➜  GitTest git:(master) ✗ git config --global user.email s3nchin@gmail.com
+➜  GitTest git:(master) ✗ git commit -m "initial commit with greetings
+dquote>  
+dquote> "
+[master (root-commit) 26b9402] initial commit with greetings
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hi.txt
+➜  GitTest git:(master) git checkout -b conflict1 
+Switched to a new branch 'conflict1'
+➜  GitTest git:(conflict1) echo "saluations" > sup.txt
+➜  GitTest git:(conflict1) ✗ git add .
+➜  GitTest git:(conflict1) ✗ git commit -m "adding sup.txt"
+[conflict1 10c96e0] adding sup.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sup.txt
+➜  GitTest git:(conflict1) git checkout master
+Switched to branch 'master'
+➜  GitTest git:(master) echo "wassup" > sup.txt
+➜  GitTest git:(master) ✗ git add .
+➜  GitTest git:(master) ✗ git commit -m "adding sup.txt on master"
+[master 99be355] adding sup.txt on master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sup.txt
+➜  GitTest git:(master) git merge conflict1
+Auto-merging sup.txt
+CONFLICT (add/add): Merge conflict in sup.txt
+Automatic merge failed; fix conflicts and then commit the result.
+➜  GitTest git:(master) ✗ cat sup.txt
+<<<<<<< HEAD
+wassup
+=======
+saluations
+>>>>>>> conflict1
+➜  GitTest git:(master) ✗ open sup.txt
+➜  GitTest git:(master) ✗ git add . 
+➜  GitTest git:(master) git commit -m "fixing conflict"
+[master f19b373] fixing conflict
+➜  GitTest git:(master) touch terminalread.txt
+➜  GitTest git:(master) ✗ rm terminalread.txt
+➜  GitTest git:(master) cd ..
+➜  Rithm touch terminalprint.txt
+➜  Rithm 
+➜  Rithm 

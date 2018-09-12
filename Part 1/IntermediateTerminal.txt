@@ -1,0 +1,27 @@
+Part 1
+1. export FIRST_NAME=Nathan
+2. echo $FIRST_NAME
+3. echo $PATH
+4. A set of paths for the enviroment to find commands to run
+5. In the same vein that you use variables in programming, enviroment variables save time/space.
+6. Modify the shell configuration file with the new variable you want to add (export NAME etc etc)
+7. A program running on the computer.
+8. -ps in the terminal will show all processes running. Use ps aux to show all processes, owners, and active processes.
+9. PID is process ID, used to id a process for terminal actions.
+10. kill <PID>
+11. Kill -9 terminates a process, kaput. Regular kill mighth ave the command missed if the process is frozen or hanging.
+12. -i
+13. -B
+14. -C
+15. -A
+16. -w
+17. -n
+
+Part 2
+1. find ~/Desktop -name "learn"
+2. find ~/Desktop -name "P.*"
+3. find ~/Desktop -name "*.txt"
+4. find ~/Desktop/views -name "*data*"
+5. grep -c "Elie" instructors.txt
+6. grep -w "P.*" instructors.txt
+7. grep -ni "z*" instructors.txt
