@@ -4,67 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Corner of the Internet</title>
+  <link rel="stylesheet" href="style.css">
+  <title>A Night Sky Full of Stars</title>
 </head>
 <body>
   <header>
-    <nav id="navbar">
-      <li id="menu-menu button" class="menu"><a href="#">Menu</a></li>
-      <li id="menu-home" class="home"><a href="#">Home</a></li>
-      <li id="menu-meme-generator" class="menu"><a href="#">Meme Generator</a></li>
-      <li id="menu-contact" class="menu"><a href="#">Contact</a></li> <!-- Still needs working links-->
-    </nav>
-  <img src="#" alt="Yozora no Hoshi - Night Sky Full of Stars">
+    <aside>
+        <nav id="navbar">
+          <div id="menu-home" class="menu"><a href="index.html" class="border-text link-text no-underline">Home</a></div>
+          <div id="menu-meme-generator" class="menu"><a href="#" class="border-text link-text no-underline">Meme Generator</a></div>
+          <div id="menu-matching-game" class="menu"><a href="#" class="border-text link-text no-underline">Memory Game</a></div>
+          <div id="menu-github" class="menu"><a href="https://github.com/YozoraNoHoshi/RithmPreWork" class="border-text link-text no-underline">My GitHub</a></div> 
+        </nav>
+    </aside>
+    <div id="img-banner">
+        <h1 id="title-banner"><a href="index.html" class="border-text no-underline">A Night Sky Full of Stars</a></h1>
+    </div> <!--img-banner-->
   </header>
-  <div id="landing">
-    <div>
-      <p>This is the landing page. Welcome to my little space of the internet. Enjoy your stay.</p>
-    </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Pre-Work</th>
-          <th>Assignment Name</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Terminal and Github Exercises</td>
-          <td><a href="https://github.com/YozoraNoHoshi/RithmPreWork/tree/master/Part%201">Completed.</a></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Build your own website</td>
-          <td><a href="#">Work in progress.</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>JavaScript Classrooms</td>
-          <td>Completed!</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Meme Generator</td>
-          <td><a href="#">Planning</a></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Matching Game</td>
-          <td><a href="#">Planning</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div> <!-- #landing-->
-  <footer class="footer">
-    <div id="about">
-      <a href="#">About Me</a>
-    </div> <!-- #about -->
-    <div id="contact">
-      <div>Nathan Chin</div>
-      <div>nchoshizora@gmail.com</div>
-    </div> <!-- #contact-->
+
+  <div class="row-container">
+
+    <div id="sidebar-container">
+      <div class="title-box"><h2 class="title-text">Web Dev Links</h2></div>
+      <div class="row-container siderow-container">
+        <div class="link-container right-margin">
+          <a href="https://www.rithmschool.com/curriculum"><img src="https://www.rithmschool.com/assets/logos/rithm_logo_black-b2e8a9fa354635ed5a5979961d4836a0bcc54b9751eadc6e023ccc350d0aeb3b.png" alt="Rithm Logo" height="50px" width="50px"></a>
+          <a href="https://www.rithmschool.com/curriculum" class="border-text link-text">Rithm School</a>
+        </div>
+        <div class="link-container siderow-container">
+          <a href="https://css-tricks.com"><img src="http://linkis.com/url-image/https://cdn.css-tricks.com/wp-content/uploads/2014/03/css-tricks-star.png" alt="css-tricks" height="50px" width="50px"></a>
+          <a href="https://css-tricks.com" class="border-text link-text">CSS Tricks</a>
+        </div>
+      </div>
+      
+      <div class="title-box"><h2 class="title-text">Anime/Manga</h2></div>
+      <div class="row-container siderow-container">
+        <div class="link-container right-margin">
+          <a href="https://mangadex.org" class="no-padding"><img src="https://mangadex.org/images/misc/navbar.svg?3" alt="MangaDex Logo" height="60px" width="60px"></a>
+          <a href="https://mangadex.org" class="border-text link-text">MangaDex</a>
+        </div>
+        <div class="link-container right-margin">
+          <a href="https://www.novelupdates.com"><img src="https://forum.novelupdates.com/attachments/nu-curvy-png.7846/" alt="Novel Updates" height="60px" width="60px"></a>
+          <a href="https://www.novelupdates.com" class="border-text link-text">Novel Updates</a>
+        </div>
+      </div>
+      <div class="row-container siderow-container">
+        <div class="link-container right-margin">
+          <a href="https://dd.reddit.com/r/manga/" class="no-padding"><img src="http://www.userlogos.org/files/icn_reddit2.png" alt="r/manga subreddit" height="60px"></a>
+          <a href="https://dd.reddit.com/r/manga/" class="border-text link-text">r/manga</a>
+        </div>
+        <div class="link-container right-margin">
+            <a href="https://www.mangaupdates.com"><img src="https://www.mangaupdates.com/images/mascot.gif" alt="Baka-Updates Logo" height="60px" width="60px"></a>
+            <a href="https://www.mangaupdates.com" class="border-text link-text">Baka Updates</a>
+        </div>    
+      </div>
+      <div class="title-box"><h2 class="title-text">About</h2></div>  
+      <p class="left-margin">This is my playground for all things HTML and CSS... and maybe JavaScript and a few other things too.</p>
+      <a href="resume.pdf" id="resume-attach" class="left-margin border-text link-text">My Resume</a>
+      <div id="contact" class="left-margin">Contact Me at: <span id="contact-email">nchoshizora@gmail.com</span></div>
+    </div> <!-- #sidebar-container-->
+
+    <div id="primary-container">
+      <div> <!-- Intro blurb -->
+        <p>Welcome to my little space of the internet. Enjoy your stay.</p>
+      </div>
+
+      <div class="article-title"><h2 class="article-title-text">Pre-Work Progress</h2></div>
+      <div class="row-container">
+        <div class="decoration-container">
+          <div class="flavor-text">"I can sense the potential in this one..."</div>
+          <img src="https://vignette.wikia.nocookie.net/fireemblem/images/8/8a/Heroes_Ophelia_Sprite.png/revision/latest?cb=20180916153855" alt="Ophelia Dusk" height="100px">
+        </div>
+        <div id="prework-progress">
+          <table class="table">
+            <thead>
+              <tr class="row">
+                <th>Pre-Work</th>
+                <th>Assignment Name</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row">
+                <td class="cell">1</td>
+                <td class="cell">Terminal and Github Exercises</td>
+                <td class="cell"><a href="https://github.com/YozoraNoHoshi/RithmPreWork/tree/master/Part%201" class="link-text">Completed.</a></td>
+              </tr>
+              <tr class="row">
+                <td class="cell">2</td>
+                <td class="cell">Build your own website</td>
+                <td class="cell"><a href="#" class="link-text">Work in progress.</a></td>
+              </tr>
+              <tr class="row">
+                <td class="cell">3</td>
+                <td class="cell">JavaScript Classrooms</td>
+                <td class="cell">Completed!</td>
+              </tr>
+              <tr class="row">
+                <td class="cell">4</td>
+                <td class="cell">Meme Generator</td>
+                <td class="cell"><a href="#" class="link-text">Planning</a></td>
+              </tr>
+              <tr class="row">
+                <td class="cell">5</td>
+                <td class="cell">Matching Game</td>
+                <td class="cell"><a href="#" class="link-text">Planning</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- #prework-progress-->
+      </div>
+
+<!-- https://vignette.wikia.nocookie.net/fireemblem/images/8/8a/Heroes_Ophelia_Sprite.png/revision/latest?cb=20180916153855 -->
+      
+
+    </div> <!-- #primary-container-->
+
+    <div id="settings-container">
+      <div class="title-box"><h2 class="title-text">Animation Corner</h2></div>
+      <div id="drop"></div>
+      <div id="cross"></div>
+      <div id="star"></div>
+    </div> <!-- #settings-container-->
+
+  </div> <!-- .row-container-->
+
+  <footer>
+    <div id="troll-bar" class="border-text">Thanks for visiting!</div>
   </footer>
 </body>
 </html>
