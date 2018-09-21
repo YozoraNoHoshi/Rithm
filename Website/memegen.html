@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>A Night Sky Full of Stars</title>
+  <title>Meme Generator</title>
 </head>
 <body>
   <header>
@@ -65,70 +65,48 @@
       <div id="contact" class="left-margin">Contact Me at: <span id="contact-email">nchoshizora@gmail.com</span></div>
     </div> <!-- #sidebar-container-->
 
-    <div id="primary-container" class="column-container">
-      <div> <!-- Intro blurb -->
-        <!-- <p>Welcome to my little space of the internet. Enjoy your stay.</p> -->
+    <div id="meme-container" class="column-container">
+      <div class="article-title"><h2 class="article-title-text">Instructions</h2></div>
+      <div class="left-align">
+        <p>Use the form on the right to create your own meme! You will require:
+          <li>An image to use as a background</li>
+          <li>Text for the top and bottom of the image</li>
+        </p>
       </div>
-
-      <div class="article-title"><h2 class="article-title-text">Pre-Work Progress</h2></div>
       <div class="row-container">
-        <div class="decoration-container column-container">
-          <div class="flavor-text">"I can sense the potential in this one..."</div>
-          <img src="https://vignette.wikia.nocookie.net/fireemblem/images/8/8a/Heroes_Ophelia_Sprite.png/revision/latest?cb=20180916153855" alt="Ophelia Dusk" height="100px">
-        </div>
-        <div id="prework-progress">
-          <table class="table">
-            <thead>
-              <tr class="row">
-                <th>Pre-Work</th>
-                <th>Assignment Name</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="row">
-                <td class="cell">1</td>
-                <td class="cell">Terminal and Github Exercises</td>
-                <td class="cell"><a href="https://github.com/YozoraNoHoshi/RithmPreWork/tree/master/Part%201" class="link-text">Completed.</a></td>
-              </tr>
-              <tr class="row">
-                <td class="cell">2</td>
-                <td class="cell">Build your own website</td>
-                <td class="cell"><a href="index.html" class="link-text">You're right here.</a></td>
-              </tr>
-              <tr class="row">
-                <td class="cell">3</td>
-                <td class="cell">JavaScript Classrooms</td>
-                <td class="cell">Completed!</td>
-              </tr>
-              <tr class="row">
-                <td class="cell">4</td>
-                <td class="cell">Meme Generator</td>
-                <td class="cell"><a href="#" class="link-text">Planning</a></td>
-              </tr>
-              <tr class="row">
-                <td class="cell">5</td>
-                <td class="cell">Matching Game</td>
-                <td class="cell"><a href="#" class="link-text">Planning</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div> <!-- #prework-progress -->
+        <button>Sample 1</button>
+        <button>Sample 2</button>
+        <button>Sample 3</button>
       </div>
+      <div class="article-title"><h2 class="title-text center-text">Meme Gallery</h2></div>
+      <div id="meme-gallery" class="row-container">
+        <!-- Memes will be added here -->
+      </div>
+    </div> <!-- #meme-container -->
 
-<!-- https://vignette.wikia.nocookie.net/fireemblem/images/8/8a/Heroes_Ophelia_Sprite.png/revision/latest?cb=20180916153855 -->
-      
-
-    </div> <!-- #primary-container -->
-
-    <div id="settings-container" class="column-container">
-      <div class="title-box"><h2 class="title-text">Animation Corner</h2></div>
-      <div id="drop"></div>
-      <div id="cross"></div>
-      <div id="star"></div>
+    <div id="generator-container" class="column-container">
+      <div class="title-box"><h3 class="title-text">Meme Generator</h3></div>
+      <div id="meme-generator" class="row-container left-margin">
+        <form action="#">
+          <li class="invis gen-margin"><label for="meme-name">Meme Name:</label></li>
+          <input type="text" name="meme-name" id="meme-name">
+          <li class="invis gen-margin"><label for="meme-link">Image Base: </label></li>
+          <input type="text" name="meme-link" id="meme-link">
+          <li class="invis gen-margin"><label for="meme-top">Top Text:</label></li>
+          <input type="text" name="meme-top" id="meme-top">
+          <li class="invis gen-margin"><label for="meme-bottom">Bottom Text:</label></li>
+          <input type="text" name="meme-bottom" id="meme-bottom">
+          <li class="invis gen-margin"><input type="submit" value="Create Meme"></li>
+        </form>
+      </div>
+      <div class="title-box"><h3 class="title-text">Delete a Meme</h3></div>
+      <div id="meme-deletor" class="row-container left-margin">
+        <form action="#">
+          <li class="invis gen-margin"><label for="delete-meme">Meme Name:</label></li>
+          <input type="text" name="delete-meme" id="delete-meme">
+          <li class="invis gen-margin"><input type="submit" value="Delete Meme"></li>
+        </form>
+      </div>
+      <!-- Link to image, top text, bottom text, submit button -->
     </div> <!-- #settings-container -->
-
-  </div> <!-- .row-container -->
-
-</body>
-</html>
+  </div>

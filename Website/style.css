@@ -22,8 +22,6 @@ body {
   height: 25vh;
   background-position-x: 50%;
   background-position-y: 50%;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -37,43 +35,50 @@ footer,
   display: flex;
   flex-direction: row;
 }
-
-.siderow-container {
-  width: 100%;
+.column-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrap-container {
   flex-wrap: wrap;
 }
 
+.siderow-container {
+  width: 100%;
+}
+
+#primary-container,
+#meme-container {
+  width: 60%;
+}
+
+#settings-container,
+#generator-container {
+  width: 20%;
+  align-items: left;
+  overflow: auto;
+}
+
+#primary-container,
+#meme-container {
+  align-items: center;
+  overflow: auto;
+}
+
 #sidebar-container {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
   overflow: auto;
   width: 20%;
 }
 
-#primary-container,
-#settings-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: auto;
-}
-
-#settings-container {
-  width: 20%;
-}
-
 .link-container {
   justify-content: center;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   overflow: auto;
   /* border: 2px solid white; */
   margin-top: 5px;
+  padding-top: 5px;
   width: 50%;
 }
 
@@ -83,16 +88,29 @@ footer,
 
 .decoration-container {
   justify-content: flex-end;
-  display: flex;
-  flex-direction: column;
   align-items: baseline;
   overflow: auto;
   margin: 15px;
   width: 15%;
 }
 
-#primary-container {
-  width: 60%;
+/* Mobile Configurations */
+@media (max-width: 760px) {
+  #settings-container {
+    display: none;
+  }
+  #primary-container,
+  #sidebar-container,
+  #generator-container,
+  #meme-container {
+    width: 100%;
+  }
+  #generator-container {
+    align-items: center;
+  }
+  #main {
+    flex-direction: column-reverse;
+  }
 }
 
 /* Table Styling */
@@ -109,6 +127,10 @@ footer,
   border: 1px solid black;
   padding: 10px;
 }
+
+.cell:hover {
+  background-color: rgb(156, 156, 156);
+}
 /* Text Styling */
 .title-text {
   color: white;
@@ -119,10 +141,6 @@ footer,
 .border-text {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.no-underline {
-  text-decoration: none;
 }
 
 .link-text {
@@ -144,6 +162,22 @@ footer,
   margin-right: 5px;
 }
 
+.left-margin {
+  margin-left: 5px;
+}
+
+.gen-margin {
+  margin-top: 5px;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
 .flavor-text {
   word-wrap: break-word;
 }
@@ -158,6 +192,7 @@ footer,
   background-color: rgb(23, 47, 78);
   width: 80%;
   margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .article-title-text {
@@ -167,8 +202,16 @@ footer,
   text-align: center;
 }
 
-.left-margin {
-  margin-left: 5px;
+.center-text {
+  text-align: center;
+}
+
+.invis {
+  list-style: none;
+}
+
+input {
+  width: 30ch;
 }
 
 /* Animations */
@@ -188,17 +231,17 @@ footer,
 
 @keyframes cross {
   0% {
-    transform: translate(-75px, 100px);
+    transform: translate(75px, 100px);
     background-color: lightseagreen;
     border-radius: 50px;
   }
   50% {
-    transform: translate(-75px, 100px) rotate(135deg);
+    transform: translate(75px, 100px) rotate(135deg);
     border-radius: 0px;
     background-color: lightseagreen;
   }
   100% {
-    transform: translate(-75px, 100px) rotate(180deg);
+    transform: translate(75px, 100px) rotate(180deg);
     background-color: lightseagreen;
     border-radius: 50px;
   }
@@ -216,7 +259,7 @@ footer,
     background-color: lightskyblue;
   }
   50% {
-    transform: translate(-50px, 225px) rotate(4545deg) scale(0.5, 0.5);
+    transform: translate(50px, 225px) rotate(4545deg) scale(0.5, 0.5);
     border-radius: 0px;
     background-color: lightskyblue;
   }
@@ -228,22 +271,5 @@ footer,
   100% {
     transform: translate(0px, 0px) rotate(4545deg);
     border-radius: 50px;
-  }
-}
-
-/* Mobile Configurations */
-@media (max-width: 760px) {
-  #settings-container {
-    display: none;
-  }
-  #primary-container {
-    width: 100%;
-  }
-
-  #sidebar-container {
-    width: 100%;
-  }
-  #main {
-    flex-direction: column-reverse;
   }
 }
