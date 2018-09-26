@@ -13,7 +13,7 @@
         <nav id="navbar">
           <div id="menu-home" class="menu"><a href="index.html" class="border-text link-text no-underline">Home</a></div>
           <div id="menu-meme-generator" class="menu"><a href="memegen.html" class="border-text link-text no-underline">Meme Generator</a></div>
-          <div id="menu-matching-game" class="menu"><a href="matchgame.html" class="border-text link-text no-underline">Memory Game</a></div>
+          <div id="menu-matching-game" class="menu"><a href="matchgame.html" class="border-text link-text no-underline">Concentration</a></div>
           <div id="menu-github" class="menu"><a href="https://github.com/YozoraNoHoshi/RithmPreWork" class="border-text link-text no-underline">My GitHub</a></div> 
         </nav>
     </aside>
@@ -61,52 +61,55 @@
 
       <div class="title-box"><h3 class="title-text">About</h3></div>  
       <p class="left-margin">This is my playground for all things HTML and CSS... and maybe JavaScript and a few other things too.</p>
+      <p class="left-margin">Chibi Sprites taken from Fire Emblem Heroes.</p>
       <a href="resume.pdf" id="resume-attach" class="left-margin border-text link-text">My Resume</a>
       <div id="contact" class="left-margin">Contact Me at: <span id="contact-email">nchoshizora@gmail.com</span></div>
     </div> <!-- #sidebar-container-->
 
+    <div class="filler"></div>
+
     <div id="meme-container" class="column-container">
       <div class="article-title"><h2 class="article-title-text">Instructions</h2></div>
-      <div class="left-align">
-        <p>Use the form on the right to create your own meme! You will require:
-          <li>An image to use as a background</li>
-          <li>Text for the top and bottom of the image</li>
-        </p>
-      </div>
       <div class="row-container">
-        <button>Sample 1</button>
-        <button>Sample 2</button>
-        <button>Sample 3</button>
+        <div class="decoration-container column-container">
+            <div class="flavor-text">"Just as I planned!"</div>
+            <img src="https://vignette.wikia.nocookie.net/fireemblem/images/3/3a/Heroes_M_Morgan_Sprite_%285%2A%29.png/revision/latest?cb=20180605072905" alt="Ophelia Dusk" height="100px">
+        </div>
+        <div class="column-container">
+          <div class="left-align">
+            <p>Use the form on the right to create your own meme! You will require:
+              <li>An image to use as a background</li>
+              <li>Text for the top and bottom of the image</li>
+            </p>
+          </div>
+        </div>
+        
       </div>
+
       <div class="article-title"><h2 class="title-text center-text">Meme Gallery</h2></div>
-      <div id="meme-gallery" class="row-container">
+      <div id="gallery-count">There are currently no memes in the gallery.</div>
+      <div id="meme-gallery">
         <!-- Memes will be added here -->
-      </div>
+      </div> <!-- #meme-gallery -->
     </div> <!-- #meme-container -->
+
+    <div class="filler"></div>
 
     <div id="generator-container" class="column-container">
       <div class="title-box"><h3 class="title-text">Meme Generator</h3></div>
       <div id="meme-generator" class="row-container left-margin">
-        <form action="#">
-          <li class="invis gen-margin"><label for="meme-name">Meme Name:</label></li>
-          <input type="text" name="meme-name" id="meme-name">
+        <form action="#" id="add-meme">
           <li class="invis gen-margin"><label for="meme-link">Image Base: </label></li>
-          <input type="text" name="meme-link" id="meme-link">
+          <input type="url" name="meme-link" id="meme-link">
           <li class="invis gen-margin"><label for="meme-top">Top Text:</label></li>
           <input type="text" name="meme-top" id="meme-top">
           <li class="invis gen-margin"><label for="meme-bottom">Bottom Text:</label></li>
           <input type="text" name="meme-bottom" id="meme-bottom">
           <li class="invis gen-margin"><input type="submit" value="Create Meme"></li>
         </form>
-      </div>
-      <div class="title-box"><h3 class="title-text">Delete a Meme</h3></div>
-      <div id="meme-deletor" class="row-container left-margin">
-        <form action="#">
-          <li class="invis gen-margin"><label for="delete-meme">Meme Name:</label></li>
-          <input type="text" name="delete-meme" id="delete-meme">
-          <li class="invis gen-margin"><input type="submit" value="Delete Meme"></li>
-        </form>
-      </div>
-      <!-- Link to image, top text, bottom text, submit button -->
-    </div> <!-- #settings-container -->
+      </div> <!-- #meme-generator-->
+    </div> <!-- #generator-container -->
   </div>
+  <script src="meme-script.js"></script>
+</body>
+</html>

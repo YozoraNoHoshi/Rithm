@@ -49,8 +49,14 @@ footer,
 }
 
 #primary-container,
-#meme-container {
-  width: 60%;
+#meme-container,
+#concentration-container {
+  width: 54%;
+}
+
+.filler {
+  width: 3%;
+  height: 100%;
 }
 
 #settings-container,
@@ -64,6 +70,9 @@ footer,
 #meme-container {
   align-items: center;
   overflow: auto;
+}
+#concentration-container {
+  align-items: center;
 }
 
 #sidebar-container {
@@ -93,13 +102,22 @@ footer,
   margin: 15px;
   width: 15%;
 }
+.decoration-sidebar {
+  justify-content: flex-end;
+  align-items: baseline;
+  overflow: auto;
+  margin: 15px;
+  width: 60%;
+}
 
 /* Mobile Configurations */
 @media (max-width: 760px) {
-  #settings-container {
+  #settings-container,
+  .filler {
     display: none;
   }
   #primary-container,
+  #concentration-container,
   #sidebar-container,
   #generator-container,
   #meme-container {
@@ -131,6 +149,7 @@ footer,
 .cell:hover {
   background-color: rgb(156, 156, 156);
 }
+
 /* Text Styling */
 .title-text {
   color: white;
@@ -138,9 +157,30 @@ footer,
   margin: 5px;
 }
 
-.border-text {
+.border-text,
+.victory-text {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.title-box {
+  background-color: rgb(47, 73, 145);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.article-title {
+  background-color: rgb(23, 47, 78);
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.article-title-text {
+  color: rgb(176, 229, 252);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .link-text {
@@ -174,6 +214,10 @@ footer,
   text-align: left;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .no-underline {
   text-decoration: none;
 }
@@ -182,36 +226,159 @@ footer,
   word-wrap: break-word;
 }
 
-.title-box {
-  background-color: rgb(47, 73, 145);
-  width: 100%;
-  margin-top: 20px;
-}
-
-.article-title {
-  background-color: rgb(23, 47, 78);
-  width: 80%;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-.article-title-text {
-  color: rgb(176, 229, 252);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.center-text {
-  text-align: center;
-}
-
 .invis {
   list-style: none;
 }
-
+/* Form Styles */
 input {
   width: 30ch;
+}
+#new-game-button {
+  width: 20ch;
+}
+.num-input {
+  width: 5ch;
+}
+
+/* Meme Generator Styles */
+
+#meme-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-entry {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5px;
+}
+.top-kek,
+.btm-kek {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.top-kek {
+  position: absolute;
+  top: 5px;
+}
+.meme {
+  width: 100%;
+}
+.btm-kek {
+  position: absolute;
+  bottom: 5px;
+}
+
+/* Concentration Styling */
+
+#board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.card-slot {
+  perspective: 1000px;
+  margin: 3px;
+}
+
+.matched {
+  opacity: 0.2;
+  animation: fadeOut 0.5s ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.card-slot.flip .card,
+.card-slot.matched .card {
+  transform: rotateY(180deg);
+}
+.card-slot,
+.card-front,
+.card-back-black,
+.card-back-red {
+  width: 77px;
+  height: 108px;
+}
+.card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card-front,
+.card-back-black,
+.card-back-red {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background: url('assets/cardback.png');
+  background-size: cover;
+}
+.card-back-black,
+.card-back-red {
+  transform: rotateY(-180deg);
+}
+.card-back-black {
+  background: url('assets/cardspade.png');
+  background-size: cover;
+  color: black;
+}
+.card-back-red {
+  background: url('assets/cardheart.png');
+  background-size: cover;
+  color: red;
+}
+
+.kado-text,
+.kado-br-text {
+  position: absolute;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.victory-text {
+  position: absolute;
+  font-size: 3em;
+}
+.kado-text {
+  top: 0px;
+}
+.kado-br-text {
+  bottom: 0px;
+  right: 0px;
 }
 
 /* Animations */

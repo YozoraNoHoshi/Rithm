@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Meme Generator</title>
+  <title>Concentration</title>
 </head>
 <body>
   <header>
@@ -13,7 +13,7 @@
         <nav id="navbar">
           <div id="menu-home" class="menu"><a href="index.html" class="border-text link-text no-underline">Home</a></div>
           <div id="menu-meme-generator" class="menu"><a href="memegen.html" class="border-text link-text no-underline">Meme Generator</a></div>
-          <div id="menu-matching-game" class="menu"><a href="matchgame.html" class="border-text link-text no-underline">Memory Game</a></div>
+          <div id="menu-matching-game" class="menu"><a href="matchgame.html" class="border-text link-text no-underline">Concentration</a></div>
           <div id="menu-github" class="menu"><a href="https://github.com/YozoraNoHoshi/RithmPreWork" class="border-text link-text no-underline">My GitHub</a></div> 
         </nav>
     </aside>
@@ -61,6 +61,54 @@
 
       <div class="title-box"><h3 class="title-text">About</h3></div>  
       <p class="left-margin">This is my playground for all things HTML and CSS... and maybe JavaScript and a few other things too.</p>
+      <p class="left-margin">Chibi Sprites taken from Fire Emblem Heroes.</p>
       <a href="resume.pdf" id="resume-attach" class="left-margin border-text link-text">My Resume</a>
       <div id="contact" class="left-margin">Contact Me at: <span id="contact-email">nchoshizora@gmail.com</span></div>
     </div> <!-- #sidebar-container-->
+
+    <div class="filler"></div>
+
+    <div id="concentration-container" class="column-container">
+      <div class="article-title"><h2 class="article-title-text">Concentration</h2></div>
+      <div id="board"></div> <!-- #board -->
+      
+    </div> <!-- #concentration-container-->
+
+    <div class="filler"></div>
+
+    <div id="generator-container" class="column-container">
+      <div class="title-box"><h2 class="title-text">Instructions</h2></div>
+        <div class="row-container">
+            <div class="decoration-sidebar column-container">
+              <div class="flavor-text">"I'll do my best!"</div>
+              <img src="https://vignette.wikia.nocookie.net/fireemblem/images/a/a7/Heroes_Nino_Sprite.png/revision/latest?cb=20180512145553" alt="Ophelia Dusk" height="100px">
+            </div>
+            <div class="column-container">
+              <div class="left-align">
+                <p>
+                  <li>Match pairs in the least amount of moves!</li>
+                  <li>Click the new game button to begin!</li>
+                  <li>Good luck!</li>
+                </p>
+              </div>
+            </div>
+          </div>
+      <div class="title-box"><h2 class="title-text">Settings</h2></div>
+      <form action="#" class="left-margin" id="concentration-settings">
+          <li class="invis gen-margin"><label for="deck">Pairs: </label></li>
+          <input class="num-input" type="number" name="deck" id="pair-count" min="27" value="27" readonly>
+          <li class="invis gen-margin"><label for="suites">Suites: </label></li>
+          <input class="num-input" type="number" name="suites" id="suite-count" min="1" max="2" value="1">
+          <li class="invis gen-margin"><input id="new-game-button" type="submit" value="Start a New Game!"></li>
+      </form>
+      <div class="title-box"><h2 class="title-text">Current Game Stats</h2></div>
+      <div class="left-margin">Current Score: <span id="current-score">0</span></div>
+      <div class="left-margin">High Score: <span id="high-score">0</span></div>
+      <div class="left-margin">Cards Remaining: <span id="cards-left">54</span></div>
+      
+    </div>
+
+  </div>
+  <script src="matchgame.js"></script>
+</body>
+</html>
