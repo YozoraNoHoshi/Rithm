@@ -1,48 +1,3 @@
-function generateCards(pairs, suites) {
-  let suite = 1;
-  let numberRange = [
-    'A',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    'J',
-    'Q',
-    'K',
-    'W'
-  ];
-  let deckofCards = [];
-  for (let i = 0, num = 0; i < pairs; i++) {
-    let card = {};
-    card['number'] = numberRange[num];
-    suite % 2 === 1 ? (card['suite'] = 'black') : (card['suite'] = 'red');
-    deckofCards.push(card, card);
-    num++;
-    if (num >= numberRange.length) {
-      num -= numberRange.length;
-      suite += 1;
-      if (suite > suites) suite = 1;
-    }
-  }
-  return deckofCards;
-}
-
-function shuffle(array) {
-  let counter = array.length;
-
-  while (counter > 0) {
-    let index = Math.floor(Math.random() * counter);
-    counter--;
-    array[counter] = [array[index], (array[index] = array[counter])][0];
-  }
-  return array;
-}
-
 window.onload = function() {
   let newGame = document.getElementById('concentration-settings');
   let currentScore = document.getElementById('current-score');
@@ -50,6 +5,15 @@ window.onload = function() {
   let highScore = document.getElementById('high-score');
   let board = document.getElementById('board');
   let flipping = false;
+
+  try {
+    let savedStorage = localStorage.getItem('record') || '0';
+    highScore.innerText = savedStorage;
+  } catch (e) {
+    console.log(
+      'Your high score could not be loaded from local storage. Check to see if cookies/localstorage is enabled.'
+    );
+  }
 
   newGame.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -128,7 +92,15 @@ window.onload = function() {
               wonGame.innerText = `A new record: ${
                 currentScore.innerText
               } moves!!!`;
-              localStorage.setItem('record', highScore.innerText);
+              try {
+                localStorage.setItem('record', highScore.innerText);
+              } catch (e) {
+                alert(
+                  `Your high score of ${
+                    currentScore.innerText
+                  } could not be saved.`
+                );
+              }
             } else {
               wonGame.innerText = `You won in ${currentScore.innerText} moves!`;
             }
@@ -138,7 +110,50 @@ window.onload = function() {
       }
     }
   }); //board.addEventListener
-
-  let savedStorage = localStorage.getItem('record') || '0';
-  highScore.innerText = savedStorage;
 };
+
+function generateCards(pairs, suites) {
+  let suite = 1;
+  let numberRange = [
+    'A',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    'J',
+    'Q',
+    'K',
+    'W'
+  ];
+  let deckofCards = [];
+  for (let i = 0, num = 0; i < pairs; i++) {
+    let card = {};
+    card['number'] = numberRange[num];
+    suite % 2 === 1 ? (card['suite'] = 'black') : (card['suite'] = 'red');
+    deckofCards.push(card, card);
+    num++;
+    if (num >= numberRange.length) {
+      num -= numberRange.length;
+      suite += 1;
+      if (suite > suites) suite = 1;
+    }
+  }
+  return deckofCards;
+}
+
+function shuffle(array) {
+  let counter = array.length;
+
+  //Fisher-Yates Shuffle
+  while (counter > 0) {
+    let index = Math.floor(Math.random() * counter);
+    counter--;
+    array[counter] = [array[index], (array[index] = array[counter])][0];
+  }
+  return array;
+}

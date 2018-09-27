@@ -13,6 +13,10 @@ body {
   padding: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  transition: color 0.25s linear;
+}
+.menu:hover {
+  background-color: rgb(71, 104, 196);
 }
 
 #img-banner {
@@ -34,6 +38,7 @@ footer,
 #main {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 .column-container {
   display: flex;
@@ -54,10 +59,10 @@ footer,
   width: 54%;
 }
 
-.filler {
+/* .filler {
   width: 3%;
   height: 100%;
-}
+} */
 
 #settings-container,
 #generator-container {
@@ -151,13 +156,9 @@ footer,
 }
 
 /* Text Styling */
-.title-text {
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  margin: 5px;
-}
 
 .border-text,
+.title-text,
 .victory-text {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -181,6 +182,10 @@ footer,
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+}
+
+.title-text {
+  margin: 5px;
 }
 
 .link-text {
@@ -266,6 +271,8 @@ input {
   align-items: center;
   position: relative;
   margin-bottom: 5px;
+  animation: grandEntrance 0.75s ease-in;
+  animation-iteration-count: 1;
 }
 .top-kek,
 .btm-kek {
@@ -283,6 +290,15 @@ input {
 .btm-kek {
   position: absolute;
   bottom: 5px;
+}
+
+@keyframes grandEntrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Concentration Styling */
