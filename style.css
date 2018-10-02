@@ -238,7 +238,8 @@ footer,
 input {
   width: 30ch;
 }
-#new-game-button {
+#new-game-button,
+#blackjack-button {
   width: 20ch;
 }
 .num-input {

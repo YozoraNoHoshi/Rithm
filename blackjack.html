@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Concentration</title>
+  <title>Blackjack</title>
 </head>
 <body>
   <header>
@@ -69,14 +69,8 @@
 
     <div class="filler"></div>
 
-    <div id="concentration-container" class="column-container">
-      <div class="article-title"><h2 class="article-title-text">Concentration</h2></div>
-      <div id="board">
-        <img src="https://i.imgur.com/lqRKRwv.jpg">
-        <img src="https://i.imgur.com/MKmtLgv.jpg">
-      </div> <!-- #board -->
-      
-    </div> <!-- #concentration-container-->
+    <div id="primary-container" class="column-container">
+    </div> <!-- #primary-container-->
 
     <div class="filler"></div>
 
@@ -90,8 +84,8 @@
             <div class="column-container">
               <div class="left-align">
                 <p>
-                  <li>Match pairs in the least amount of moves!</li>
-                  <li>Click the new game button to begin!</li>
+                  <li>Score higher than the dealer!</li>
+                  <li>But don't go past 21!</li>
                   <li>Good luck!</li>
                 </p>
               </div>
@@ -99,20 +93,14 @@
           </div>
       <div class="title-box"><h2 class="title-text">Settings</h2></div>
       <form action="#" class="left-margin" id="concentration-settings">
-          <li class="invis gen-margin"><label for="deck">Pairs: </label></li>
-          <input class="num-input" type="number" name="deck" id="pair-count" min="27" value="27" readonly>
-          <li class="invis gen-margin"><label for="suites">Suites: </label></li>
-          <input class="num-input" type="number" name="suites" id="suite-count" min="1" max="2" value="1">
-          <li class="invis gen-margin"><input id="new-game-button" type="submit" value="Start a New Game!"></li>
+          <li class="invis gen-margin"><label for="bet">Bet: </label></li>
+          <input class="num-input" type="number" name="bet" id="bet-amount" min="5" value="5">
+          <li class="invis gen-margin"><label for="queen-bet">Bonus Bet: </label></li>
+          <input class="num-input" type="number" name="queen-bet" id="bet-amount" min="0" value="0">
+          <li class="invis gen-margin"><input id="blackjack-button" type="submit" value="Deal a new round!"></li>
       </form>
       <div class="title-box"><h2 class="title-text">Current Game Stats</h2></div>
-      <div class="left-margin">Current Score: <span id="current-score">0</span></div>
-      <div class="left-margin">High Score: <span id="high-score">0</span></div>
-      <div class="left-margin">Cards Remaining: <span id="cards-left">54</span></div>
-      
+      <div class="left-margin">Your Bankroll: <span id="bankroll">0</span></div>
     </div>
-
-  </div>
-  <script src="matchgame.js"></script>
+  </div> <!-- main-->
 </body>
-</html>
