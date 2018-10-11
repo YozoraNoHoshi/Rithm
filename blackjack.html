@@ -70,6 +70,35 @@
     <div class="filler"></div>
 
     <div id="primary-container" class="column-container">
+      <div class="article-title"><h2 class="article-title-text">Blackjack</h2></div>
+      <div id="blackjack-board">
+        <!-- Dealer Cards -->
+        <div id="dealer-hand" class="row-container"></div>
+
+        <!-- Deck -->
+        <div id="deck">
+
+          <div class="card-slot">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-black">
+                <div class="kado-text">J</div>
+                <div class="kado-br-text">J</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Player Cards -->
+        <div id="player-hand" class='row-container'></div>
+
+        <!-- Hit/Stay Buttons -->
+        <div class="row-container">
+          <button class="bj-choices" id="hit-me">Hit Me!</button>
+          <button class="bj-choices" id='hit-me-not'>Stay</button>
+        </div>
+
+      </div>
     </div> <!-- #primary-container-->
 
     <div class="filler"></div>
@@ -83,24 +112,25 @@
             </div>
             <div class="column-container">
               <div class="left-align">
-                <p>
-                  <li>Score higher than the dealer!</li>
-                  <li>But don't go past 21!</li>
-                  <li>Good luck!</li>
+                <p> If your starting hand contains:
+                  <li>Two Queens (x6)</li>
+                  <li>Exactly 20 (x3)</li>
+                  <li>You earn your bonus bet * the multiplier!</li>
                 </p>
               </div>
             </div>
           </div>
       <div class="title-box"><h2 class="title-text">Settings</h2></div>
-      <form action="#" class="left-margin" id="concentration-settings">
+      <form action="#" class="left-margin" id="blackjack-settings">
           <li class="invis gen-margin"><label for="bet">Bet: </label></li>
           <input class="num-input" type="number" name="bet" id="bet-amount" min="5" value="5">
           <li class="invis gen-margin"><label for="queen-bet">Bonus Bet: </label></li>
-          <input class="num-input" type="number" name="queen-bet" id="bet-amount" min="0" value="0">
+          <input class="num-input" type="number" name="queen-bet" id="bonus-amount" min="0" value="0">
           <li class="invis gen-margin"><input id="blackjack-button" type="submit" value="Deal a new round!"></li>
       </form>
       <div class="title-box"><h2 class="title-text">Current Game Stats</h2></div>
-      <div class="left-margin">Your Bankroll: <span id="bankroll">0</span></div>
+      <div class="left-margin">Your Bankroll: $<span id="bankroll">100</span></div>
     </div>
   </div> <!-- main-->
+  <script src="blackjack.js"></script>
 </body>

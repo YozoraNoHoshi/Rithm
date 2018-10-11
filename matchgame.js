@@ -34,15 +34,15 @@ window.onload = function() {
       let kadoFront = document.createElement('div');
       kadoFront.className = 'card-front';
       let kadoBack = document.createElement('div');
+      cards['suite'] === 'black'
+        ? (kadoBack.className = 'card-back-black')
+        : (kadoBack.className = 'card-back-red');
       let kadoBackText = document.createElement('div');
       kadoBackText.innerText = cards['number'];
       kadoBackText.className = 'kado-text';
       let kadoBRText = document.createElement('div');
       kadoBRText.innerText = cards['number'];
       kadoBRText.className = 'kado-br-text';
-      cards['suite'] === 'black'
-        ? (kadoBack.className = 'card-back-black')
-        : (kadoBack.className = 'card-back-red');
 
       kadoBack.appendChild(kadoBackText);
       kadoBack.appendChild(kadoBRText);
@@ -63,7 +63,7 @@ window.onload = function() {
       // IF TWO CARDS FLIPPED OVER
       if (flipBack.length > 1) {
         flipping = true;
-        setTimeout(function() {
+        setTimeout(() => {
           currentScore.innerText = parseInt(currentScore.innerText) + 1;
           // MATCH
           if (flipBack[0].innerHTML === flipBack[1].innerHTML) {
@@ -98,7 +98,7 @@ window.onload = function() {
                 alert(
                   `Your high score of ${
                     currentScore.innerText
-                  } could not be saved.`
+                  } could not be saved. Check to make sure cookies and local storage is enabled.`
                 );
               }
             } else {

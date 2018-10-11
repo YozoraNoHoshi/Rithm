@@ -302,16 +302,24 @@ input {
   }
 }
 
-/* Concentration Styling */
+/* Concentration/Blackjack Styling */
 
-#board {
+#board,
+#blackjack-board {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   position: relative;
   width: 100%;
+}
+#board {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#blackjack-board {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card-slot {
   perspective: 1000px;
@@ -324,6 +332,21 @@ input {
   animation-iteration-count: 1;
 }
 
+.card-draw {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -332,6 +355,12 @@ input {
   100% {
     opacity: 0.25;
   }
+}
+
+#dealer-hand,
+#player-hand {
+  height: 108px;
+  margin: 10px;
 }
 
 .card-slot.flip .card,
@@ -390,12 +419,18 @@ input {
   position: absolute;
   font-size: 3em;
 }
+
 .kado-text {
   top: 0px;
 }
 .kado-br-text {
   bottom: 0px;
   right: 0px;
+}
+
+#dealer-hand,
+#player-hand {
+  position: relative;
 }
 
 /* Animations */
