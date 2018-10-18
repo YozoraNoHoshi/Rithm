@@ -14,7 +14,8 @@
           <div id="menu-home" class="menu"><a href="index.html" class="border-text link-text no-underline">Home</a></div>
           <div id="menu-meme-generator" class="menu"><a href="memegen.html" class="border-text link-text no-underline">Meme Generator</a></div>
           <div id="menu-matching-game" class="menu"><a href="matchgame.html" class="border-text link-text no-underline">Concentration</a></div>
-          <div id="menu-blackjack" class="menu"><a href="blackjack.html" class ="border-text link-text no no-underline">Blackjack</a></div>
+          <div id="menu-blackjack" class="menu"><a href="blackjack.html" class ="border-text link-text no-underline">Blackjack</a></div>
+          <!-- <div id="menu-stam-calc" class='menu'><a href="staminaCalculator.html" class='border-text link-text no-underline'>Stamina Calculator</a></div> -->
           <div id="menu-github" class="menu"><a href="https://github.com/YozoraNoHoshi/SkyFullOfStars" class="border-text link-text no-underline">My GitHub</a></div> 
         </nav>
     </aside>
@@ -73,7 +74,53 @@
       <div class="article-title"><h2 class="article-title-text">Blackjack</h2></div>
       <div id="blackjack-board">
         <!-- Dealer Cards -->
-        <div id="dealer-hand" class="row-container"></div>
+        <div id="dealer-hand" class="row-container">
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-black">
+                <div class="kado-text">B</div>
+                <div class="kado-br-text">B</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-black">
+                <div class="kado-text">L</div>
+                <div class="kado-br-text">L</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-black">
+                <div class="kado-text">A</div>
+                <div class="kado-br-text">A</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-black">
+                <div class="kado-text">C</div>
+                <div class="kado-br-text">C</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-black">
+                <div class="kado-text">K</div>
+                <div class="kado-br-text">K</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Deck -->
         <div id="deck">
@@ -90,7 +137,45 @@
 
         </div>
         <!-- Player Cards -->
-        <div id="player-hand" class='row-container'></div>
+        <div id="player-hand" class='row-container'>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-red">
+                <div class="kado-text">J</div>
+                <div class="kado-br-text">J</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-red">
+                <div class="kado-text">A</div>
+                <div class="kado-br-text">A</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-red">
+                <div class="kado-text">C</div>
+                <div class="kado-br-text">C</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slot flip">
+            <div class="card">
+              <div class="card-front"></div>
+              <div class="card-back-red">
+                <div class="kado-text">K</div>
+                <div class="kado-br-text">K</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
         <!-- Hit/Stay Buttons -->
         <div class="row-container">

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Blackjack</title>
+</head>
+<body>
+  <header>
+    <aside>
+        <nav id="navbar">
+          <div id="menu-home" class="menu"><a href="index.html" class="border-text link-text no-underline">Home</a></div>
+          <div id="menu-meme-generator" class="menu"><a href="memegen.html" class="border-text link-text no-underline">Meme Generator</a></div>
+          <div id="menu-matching-game" class="menu"><a href="matchgame.html" class="border-text link-text no-underline">Concentration</a></div>
+          <div id="menu-blackjack" class="menu"><a href="blackjack.html" class ="border-text link-text no-underline">Blackjack</a></div>
+          <div id="menu-stam-calc" class='menu'><a href="staminaCalculator.html" class='border-text link-text no-underline'>Stamina Calculator</a></div>
+          <div id="menu-github" class="menu"><a href="https://github.com/YozoraNoHoshi/SkyFullOfStars" class="border-text link-text no-underline">My GitHub</a></div> 
+        </nav>
+    </aside>
+    <div id="img-banner" class="row-container">
+        <h1 id="title-banner"><a href="index.html" class="border-text no-underline">A Night Sky Full of Stars</a></h1>
+    </div> <!--img-banner-->
+  </header>
+
+  <div id="stam-main">
+
+    <div id="sidebar-container" class="column-container">
+      <div class="title-box"><h3 class="title-text">Web Dev Links</h3></div>
+      <div class="row-container siderow-container">
+        <div class="link-container column-container right-margin">
+          <a href="https://www.rithmschool.com/curriculum"><img src="https://www.rithmschool.com/assets/logos/rithm_logo_black-b2e8a9fa354635ed5a5979961d4836a0bcc54b9751eadc6e023ccc350d0aeb3b.png" alt="Rithm Logo" height="50px" width="50px"></a>
+          <a href="https://www.rithmschool.com/curriculum" class="border-text link-text">Rithm School</a>
+        </div>
+        <div class="link-container column-container siderow-container">
+          <a href="https://css-tricks.com"><img src="http://linkis.com/url-image/https://cdn.css-tricks.com/wp-content/uploads/2014/03/css-tricks-star.png" alt="css-tricks" height="50px" width="50px"></a>
+          <a href="https://css-tricks.com" class="border-text link-text">CSS Tricks</a>
+        </div>
+      </div>
+      
+      <div class="title-box"><h3 class="title-text">Anime/Manga</h3></div>
+      <div class="row-container siderow-container">
+        <div class="link-container column-container right-margin">
+          <a href="https://mangadex.org" class="no-padding"><img src="https://mangadex.org/images/misc/navbar.svg?3" alt="MangaDex Logo" height="60px" width="60px"></a>
+          <a href="https://mangadex.org" class="border-text link-text">MangaDex</a>
+        </div>
+        <div class="link-container column-container right-margin">
+          <a href="https://www.novelupdates.com"><img src="https://forum.novelupdates.com/attachments/nu-curvy-png.7846/" alt="Novel Updates" height="60px" width="60px"></a>
+          <a href="https://www.novelupdates.com" class="border-text link-text">Novel Updates</a>
+        </div>
+      </div>
+      <div class="row-container siderow-container">
+        <div class="link-container column-container right-margin">
+          <a href="https://dd.reddit.com/r/manga/" class="no-padding"><img src="http://www.userlogos.org/files/icn_reddit2.png" alt="r/manga subreddit" height="60px"></a>
+          <a href="https://dd.reddit.com/r/manga/" class="border-text link-text">r/manga</a>
+        </div>
+        <div class="link-container column-container right-margin">
+            <a href="https://www.mangaupdates.com"><img src="https://www.mangaupdates.com/images/mascot.gif" alt="Baka-Updates Logo" height="60px" width="60px"></a>
+            <a href="https://www.mangaupdates.com" class="border-text link-text">Baka Updates</a>
+        </div>    
+      </div>
+
+      <div class="title-box"><h3 class="title-text">About</h3></div>  
+      <p class="left-margin">This is my playground for all things HTML and CSS... and maybe JavaScript and a few other things too.</p>
+      <p class="left-margin">Chibi Sprites taken from Fire Emblem Heroes.</p>
+      <a href="resume.pdf" id="resume-attach" class="left-margin border-text link-text">My Resume</a>
+      <div id="contact" class="left-margin">Contact Me at: <span id="contact-email">nchoshizora@gmail.com</span></div>
+    </div> <!-- #sidebar-container-->
+
+    <div class="fill"></div>
+
+    <div id="calc-container">
+      <div class='row-container'>
+        <div id="dragalia-banner" class="column-container">
+          <div class="calc-tab article-hover active-tab"><h2 class="article-text-border underline">Dragalia Lost Calculator</h2></div>
+          <!-- Avenue of Fortune Stuff
+          Desired amount of gold:
+          Calculates best combination of wings/stamina at a rate of 15 stam and 2 wings per,
+           with 6min stam recharge and 60 min wing recharge time
+          Using approximately 6.8k gold / run
+          -->
+          <!-- Stamina / Wings Calculator
+            Calculates amount of time it takes to restore x stam y wings
+            Tells you the time at which ur stam/wings are fully restored.
+           -->
+          <!-- Crafting Cost Calculator
+            Total Cost for crafting a certain stage weapon
+            Includes max unbound for all stages.
+            Provides places to farm the materials at.
+           -->
+        </div>
+    
+        <div id="feh-banner" class="column-container">
+          <div class="calc-tab article-hover"><h2 class="article-text-border">Fire Emblem Heroes Calculator</h2></div>
+        </div>
+
+      </div>
+
+      <div id="drag-calc">
+        <form action="#" class='left-margin' id="drag-stam-calc">
+          <div class="row-container">
+            <fieldset>
+              <legend>Stamina Calculator</legend>
+              <div class='column-container'>
+                <li class="invis gen-margin"><label for="current-stam">Current Stamina: </label></li>
+                <input class="bigger-num-input" type="number" name="current-stam" id="current-stam" min="0" value="0">
+                <li class="invis gen-margin"><label for="target-stam">Target Stamina: </label></li>
+                <input class="bigger-num-input" type="number" name="target-stam" id="target-stam" value="100">
+                <li class="invis gen-margin"><label for="current-wings">Getherwings: </label></li>
+                <input class="bigger-num-input" type="number" name="current-wings" id="current-wings" value="0">
+              </div>
+
+            </fieldset>
+
+          </div>
+
+        </form>
+
+        <form action="#" class='left-margin' id="drag-gold-calc">
+          <div class="row-container">
+            <fieldset>
+              <legend>Avenue of Fortune Calculator</legend>
+              <div class='column-container'>
+                <li class="invis gen-margin"><label for="f-difficulty">Difficulty:</label></li>
+                <select name="f-difficulty" id="fortune-difficulty">
+                  <option value="f-beginner">Beginner</option>
+                  <option value="f-standard">Standard</option>
+                  <option value="f-expert" selected>Expert</option>
+                </select>
+
+                <li class="invis gen-margin"><label for="target-gold">Target Rupees: </label></li>
+                <input class="biggest-num-input" type="number" name="target-gold" id="target-gold">
+              </div>
+
+            </fieldset>
+
+          </div>
+
+        </form>
+
+      </div>
+      <div id="feh-calc">
+        <form action="#" class='left-margin' id="feh-tt-calc">
+          <div class='column-container justify-center'>
+            <fieldset>
+              <legend>Tempest Trials</legend>
+                <li class="invis gen-margin"><label for="current-score">Current Score: </label></li>
+                <input class="bigger-num-input" type="number" name="current-score" id="current-score" min="0">
+                <li class="invis gen-margin"><label for="target-score">Target Score: </label></li>
+                <input class="bigger-num-input" type="number" name="target-score" id="target-score" value="50000">
+                <li class="invis gen-margin"><label for="tt-difficulty">Difficulty: </label></li>
+                <select name="tt-difficulty" id="tt-difficulty">
+                  <option value="tt-h5" selected>Hard 5</option>
+                  <option value="tt-l5">Lunatic 5</option>
+                  <option value="tt-l7">Lunatic 7</option>
+                </select>
+
+            </fieldset>
+
+          </div>
+
+        </form>
+
+        <form action="#" class='left-margin' id="feh-stam-calc">
+          <div class="row-container">
+            <fieldset>
+              <legend>Stamina Calculator</legend>
+              <div class='column-container'>
+                <li class="invis gen-margin"><label for="feh-current-stam">Current Stamina: </label></li>
+                <input class="bigger-num-input" type="number" name="feh-current-stam" id="feh-current-stam" min="0" value="0">
+                <li class="invis gen-margin"><label for="feh-target-stam">Target Stamina: </label></li>
+                <input class="bigger-num-input" type="number" name="feh-target-stam" id="feh-target-stam" value="99">
+              </div>
+            </fieldset>
+          </div>
+        </form>
+
+      </div>
+    </div> <!-- #calc-container-->
+    <div class="fill"></div>
+  </div> <!-- main-->
+  <script src="staminaCalculator.js"></script>
+</body>

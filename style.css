@@ -40,6 +40,15 @@ footer,
   flex-direction: row;
   justify-content: space-around;
 }
+#stam-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#calc-container {
+  display: flex;
+  flex-direction: column;
+}
 .column-container {
   display: flex;
   flex-direction: column;
@@ -59,14 +68,27 @@ footer,
   width: 54%;
 }
 
-/* .filler {
-  width: 3%;
-  height: 100%;
-} */
+#calc-container {
+  width: 70%;
+}
 
+#dragalia-banner,
+#feh-banner {
+  width: 50%;
+}
 #settings-container,
 #generator-container {
   width: 20%;
+}
+.fill {
+  width: 5%;
+  height: 100%;
+}
+
+#settings-container,
+#generator-container,
+#dragalia-banner,
+#feh-banner {
   align-items: left;
   overflow: auto;
 }
@@ -80,6 +102,10 @@ footer,
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+  align-items: center;
+}
 #sidebar-container {
   align-items: flex-start;
   overflow: auto;
@@ -125,13 +151,15 @@ footer,
   #concentration-container,
   #sidebar-container,
   #generator-container,
-  #meme-container {
+  #meme-container,
+  #calc-container {
     width: 100%;
   }
   #generator-container {
     align-items: center;
   }
-  #main {
+  #main,
+  #stam-main {
     flex-direction: column-reverse;
   }
 }
@@ -170,20 +198,39 @@ footer,
   margin-top: 20px;
 }
 
-.article-title {
-  background-color: rgb(23, 47, 78);
+.article-title,
+.calc-tab {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 20px;
 }
 
-.article-title-text {
+.article-title {
+  background-color: rgb(23, 47, 78);
+}
+
+.calc-tab {
+  background-color: rgb(47, 73, 145);
+}
+.active-tab {
+  background-color: rgb(9, 26, 75);
+}
+
+.article-title-text,
+.article-text-border {
   color: rgb(176, 229, 252);
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
 }
 
+.article-text-border {
+  text-shadow: -1px 0 rgb(23, 47, 78), 0 1px rgb(23, 47, 78),
+    1px 0 rgb(23, 47, 78), 0 -1px rgb(23, 47, 78);
+}
+.article-hover:hover {
+  background-color: rgb(68, 119, 163);
+}
 .title-text {
   margin: 5px;
 }
@@ -223,6 +270,10 @@ footer,
   text-align: center;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .no-underline {
   text-decoration: none;
 }
@@ -244,6 +295,12 @@ input {
 }
 .num-input {
   width: 5ch;
+}
+.bigger-num-input {
+  width: 10ch;
+}
+.biggest-num-input {
+  width: 15ch;
 }
 
 /* Meme Generator Styles */

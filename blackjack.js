@@ -170,16 +170,14 @@ window.onload = function() {
     }
   });
   // Hit button
-  hit.addEventListener('click', function(event) {
+  hit.addEventListener('click', () => {
     drawCard(playerHand, playerTotal, true);
     if (playerTotal['sum'] >= 21) {
       setTimeout(dealerTurn(), 3000);
     }
   });
   // Stay button
-  stay.addEventListener('click', function(event) {
-    dealerTurn();
-  });
+  stay.addEventListener('click', dealerTurn());
 };
 
 function generateCards(pairs, suites) {
