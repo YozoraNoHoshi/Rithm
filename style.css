@@ -31,6 +31,16 @@ body {
   text-align: center;
   font-size: 1.25em;
 }
+
+.tempest-banner {
+  position: relative;
+}
+.trial-text {
+  position: absolute;
+  font-size: 3em;
+  bottom: 7%;
+  left: 30%;
+}
 /* Container Styling */
 nav,
 footer,
@@ -40,10 +50,16 @@ footer,
   flex-direction: row;
   justify-content: space-around;
 }
-#stam-main {
+#stam-main,
+.row-center-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.row-left-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 #calc-container {
   display: flex;
@@ -187,7 +203,8 @@ footer,
 
 .border-text,
 .title-text,
-.victory-text {
+.victory-text,
+.trial-text {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -285,6 +302,15 @@ footer,
 .invis {
   list-style: none;
 }
+
+.off-display {
+  display: none;
+}
+
+.output {
+  height: 100px;
+}
+
 /* Form Styles */
 input {
   width: 30ch;

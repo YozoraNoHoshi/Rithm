@@ -177,7 +177,9 @@ window.onload = function() {
     }
   });
   // Stay button
-  stay.addEventListener('click', dealerTurn());
+  stay.addEventListener('click', () => {
+    dealerTurn();
+  });
 };
 
 function generateCards(pairs, suites) {

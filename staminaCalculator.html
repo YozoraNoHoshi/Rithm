@@ -71,19 +71,9 @@
     <div class="fill"></div>
 
     <div id="calc-container">
-      <div class='row-container'>
+      <div id='drag-feh-banner' class='row-container'>
         <div id="dragalia-banner" class="column-container">
-          <div class="calc-tab article-hover active-tab"><h2 class="article-text-border underline">Dragalia Lost Calculator</h2></div>
-          <!-- Avenue of Fortune Stuff
-          Desired amount of gold:
-          Calculates best combination of wings/stamina at a rate of 15 stam and 2 wings per,
-           with 6min stam recharge and 60 min wing recharge time
-          Using approximately 6.8k gold / run
-          -->
-          <!-- Stamina / Wings Calculator
-            Calculates amount of time it takes to restore x stam y wings
-            Tells you the time at which ur stam/wings are fully restored.
-           -->
+          <div class="calc-tab active-tab"><h2 class="article-text-border underline">Dragalia Lost Calculator</h2></div>
           <!-- Crafting Cost Calculator
             Total Cost for crafting a certain stage weapon
             Includes max unbound for all stages.
@@ -97,84 +87,83 @@
 
       </div>
 
-      <div id="drag-calc">
-        <form action="#" class='left-margin' id="drag-stam-calc">
-          <div class="row-container">
-            <fieldset>
-              <legend>Stamina Calculator</legend>
-              <div class='column-container'>
+      <div id="drag-calc" class="calculator-mark">
+
+        <!-- <div class="row-container">
+          <div>
+            <img src="https://d1u5p3l4wpay3k.cloudfront.net/dragalialost_gamepedia_en/3/33/100603.png?version=2f4b3ab2b779cdbe45e1d62e84dd2411" height="112px" width="112px">
+            <img src="https://d1u5p3l4wpay3k.cloudfront.net/dragalialost_gamepedia_en/8/81/100702.png?version=d0ecaac7399be1d2e9bf838c5d7cd351">
+          </div>
+          <div class='column-container'>
+            <form action="#" class='left-margin' id="drag-stam-calc">
+              <fieldset>
+                <legend>Stamina Calculator</legend>
                 <li class="invis gen-margin"><label for="current-stam">Current Stamina: </label></li>
-                <input class="bigger-num-input" type="number" name="current-stam" id="current-stam" min="0" value="0">
+                <input class="bigger-num-input dl-stam" type="number" name="current-stam" id="dl-current-stam" min="0" value="0">
                 <li class="invis gen-margin"><label for="target-stam">Target Stamina: </label></li>
-                <input class="bigger-num-input" type="number" name="target-stam" id="target-stam" value="100">
+                <input class="bigger-num-input dl-stam" type="number" name="target-stam" id="dl-target-stam" min="0" value="100">
                 <li class="invis gen-margin"><label for="current-wings">Getherwings: </label></li>
-                <input class="bigger-num-input" type="number" name="current-wings" id="current-wings" value="0">
-              </div>
-
-            </fieldset>
-
+                <input class="bigger-num-input dl-stam" type="number" name="current-wings" id="dl-current-wings" min="0" max="6" value="0">
+              </fieldset>    
+            </form>
           </div>
-
-        </form>
-
-        <form action="#" class='left-margin' id="drag-gold-calc">
-          <div class="row-container">
-            <fieldset>
-              <legend>Avenue of Fortune Calculator</legend>
-              <div class='column-container'>
-                <li class="invis gen-margin"><label for="f-difficulty">Difficulty:</label></li>
-                <select name="f-difficulty" id="fortune-difficulty">
-                  <option value="f-beginner">Beginner</option>
-                  <option value="f-standard">Standard</option>
-                  <option value="f-expert" selected>Expert</option>
-                </select>
-
-                <li class="invis gen-margin"><label for="target-gold">Target Rupees: </label></li>
-                <input class="biggest-num-input" type="number" name="target-gold" id="target-gold">
-              </div>
-
-            </fieldset>
-
+          <div>
+            <img src="https://d1u5p3l4wpay3k.cloudfront.net/dragalialost_gamepedia_en/8/81/100702.png?version=d0ecaac7399be1d2e9bf838c5d7cd351">
+            <img src="https://d1u5p3l4wpay3k.cloudfront.net/dragalialost_gamepedia_en/3/33/100603.png?version=2f4b3ab2b779cdbe45e1d62e84dd2411" height="112px" width="112px">
           </div>
+        </div>
+        <div class='row-container'>
+          <div id="dl-stam-output" class='output'></div>
+        </div> -->
 
-        </form>
+        <div class='row-left-container'>
+          <img src="https://c-8oqtgrjgwu46x24f3w7r5n6yrca5mx2eenqwfhtqpvx2epgv.g00.gamepedia.com/g00/3_c-8ftcicnkcnquv.icogrgfkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2ff3w7r5n6yrca5m.enqwfhtqpv.pgvx2fftcicnkcnquv_icogrgfkc_gpx2fhx2fh0x2fDcppgt_Cx78gpwg_vq_Hqtvwpg.rpix3fx78gtukqpx3dd6c9386heg5c942dh7d91e109c06e54dx26k32e.octmx3dkocig_$/$/$/$/$" alt="Avenue of Fortune" width="65%">
+        </div>
+        <div class="row-left-container">
+          <div class="column-congtainer">
+            <form action="#" class='left-margin' id="drag-gold-calc">
+              <li class="invis gen-margin"><label for="f-difficulty">Difficulty:</label></li>
+              <select name="f-difficulty" id="f-difficulty" class='dl-gold'>
+                <option value="f-beginner">Beginner</option>
+                <option value="f-standard">Standard</option>
+                <option value="f-expert" selected>Expert</option>
+              </select>
+              <li class="invis gen-margin"><label for="target-gold">Target Rupees: </label></li>
+              <input class="biggest-num-input dl-gold" type="number" name="target-gold" id="target-gold" value="100000" step="1000">
+            </form>
+          </div>
+          <div class='row-container'>
+            <div id='dl-gold-output' class='output'></div>
+          </div>
+        </div>
 
       </div>
-      <div id="feh-calc">
-        <form action="#" class='left-margin' id="feh-tt-calc">
+      <div id="feh-calc" class='off-display calculator-mark'>
+        <div class="row-container">
           <div class='column-container justify-center'>
-            <fieldset>
-              <legend>Tempest Trials</legend>
-                <li class="invis gen-margin"><label for="current-score">Current Score: </label></li>
-                <input class="bigger-num-input" type="number" name="current-score" id="current-score" min="0">
-                <li class="invis gen-margin"><label for="target-score">Target Score: </label></li>
-                <input class="bigger-num-input" type="number" name="target-score" id="target-score" value="50000">
+            <form action="#" class='left-margin' id="feh-tt-calc">
+              <fieldset>
                 <li class="invis gen-margin"><label for="tt-difficulty">Difficulty: </label></li>
-                <select name="tt-difficulty" id="tt-difficulty">
-                  <option value="tt-h5" selected>Hard 5</option>
-                  <option value="tt-l5">Lunatic 5</option>
-                  <option value="tt-l7">Lunatic 7</option>
+                <select name="tt-difficulty" id="tt-difficulty" class='feh-tt'>
+                  <option value="Hard 5" selected>Hard 5</option>
+                  <option value="Lunatic 5">Lunatic 5</option>
+                  <option value="Lunatic 7">Lunatic 7</option>
                 </select>
-
-            </fieldset>
-
+                <li class="invis gen-margin"><label for="tt-current-score">Current Score: </label></li>
+                <input class="bigger-num-input feh-tt" type="number" name="tt-current-score" id="tt-current-score" value="0" min="0" step="1000">
+                <li class="invis gen-margin"><label for="tt-target-score">Target Score: </label></li>
+                <input class="bigger-num-input feh-tt" type="number" name="tt-target-score" id="tt-target-score" value="50000" step="1000">
+              </fieldset>
+            </form>
           </div>
-
-        </form>
-
-        <form action="#" class='left-margin' id="feh-stam-calc">
-          <div class="row-container">
-            <fieldset>
-              <legend>Stamina Calculator</legend>
-              <div class='column-container'>
-                <li class="invis gen-margin"><label for="feh-current-stam">Current Stamina: </label></li>
-                <input class="bigger-num-input" type="number" name="feh-current-stam" id="feh-current-stam" min="0" value="0">
-                <li class="invis gen-margin"><label for="feh-target-stam">Target Stamina: </label></li>
-                <input class="bigger-num-input" type="number" name="feh-target-stam" id="feh-target-stam" value="99">
-              </div>
-            </fieldset>
+          <div class='tempest-banner'>
+            <img src="https://d1u5p3l4wpay3k.cloudfront.net/feheroes_gamepedia_en/f/f2/Banner_Familiar_Faces.png?version=aad681645e856458ef61cae98b0aa4f7" alt="Tempest Trials" width="100%">
+            <div class='trial-text'>Tempest Trials</div>
           </div>
-        </form>
+        </div>
+        <div class='row-container'>
+          <div id='feh-tt-output' class='output'></div>
+        </div>
 
       </div>
     </div> <!-- #calc-container-->
